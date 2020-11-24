@@ -1,0 +1,5 @@
+def vowel_filter(function):
+    def wrapper(*args, **kwargs):
+        letters = function(*args, **kwargs)
+        return [letter for letter in letters if letter.lower() in 'aeiou']
+    return wrapper
